@@ -9,3 +9,5 @@ This repository is a collection of skills I use in my regular workflow.
 ## Included Skills
 
 - `academic/paper-citation-grounder`: find, verify, place, and optionally write back trustworthy citations into a paper while avoiding fabricated references and citation clustering.
+- `academic/Humanizer-zh`: https://github.com/op7418/Humanizer-zh
+- `academic/humanizer`: https://github.com/blader/humanizer
