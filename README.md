@@ -15,3 +15,4 @@
 - `academic/paper-citation-grounder`: find, verify, place, and optionally write back trustworthy citations into a paper while avoiding fabricated references and citation clustering.
 - `academic/Humanizer-zh` (https://github.com/op7418/Humanizer-zh): 中文版 AI 写作去痕工具，基于维基百科 "Signs of AI writing" 指南，帮助将 AI 生成的内容改写得更自然、更像人类书写。
 - `academic/humanizer` (https://github.com/blader/humanizer): 英文版 AI 写作去痕工具，基于维基百科 "Signs of AI writing" 指南，移除文本中的 AI 生成痕迹。
+- `baoyu-translate` (https://github.com/JimLiu/baoyu-skills): 多模式翻译技能，支持快速/标准/精修三种模式，可自定义翻译风格（叙事/正式/技术/学术/商务等），支持长文分块翻译和术语表一致性。
