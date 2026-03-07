@@ -18,7 +18,7 @@
 你好，我需要你帮我安装 rocky-skills 项目中的所有 skills。
 项目地址：https://github.com/RockyChen0205/rocky-skills.git
 请将项目中的每个 skill 复制到你的 skills 目录下（每个 skill 复制到对应的子目录），并确保它们可以被正确加载。
-
+```
 
 ## Included Skills
 
