@@ -10,6 +10,16 @@
 
 - `academic/`: skills for academic writing, paper analysis, citation grounding, and related research tasks.
 
+## 如何安装
+
+你可以直接给你的 AI agent (Claude Code / Codex / opencode / ...) 发送以下 prompt 来安装本项目中的所有 skills：
+
+```
+你好，我需要你帮我安装 rocky-skills 项目中的所有 skills。
+项目地址：https://github.com/RockyChen0205/rocky-skills.git
+请将项目中的每个 skill 复制到你的 skills 目录下（每个 skill 复制到对应的子目录），并确保它们可以被正确加载。
+
+
 ## Included Skills
 
 - `academic/paper-citation-grounder`: find, verify, place, and optionally write back trustworthy citations into a paper while avoiding fabricated references and citation clustering.
