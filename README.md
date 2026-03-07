@@ -1,5 +1,7 @@
 # rocky-skills
 
+![rocky-skills banner](./assets/rocky-skills-banner.png)
+
 This repository is a collection of skills I use in my regular workflow.
 
 ## Structure
