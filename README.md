@@ -1,8 +1,10 @@
-# rocky-skills
+<p align="center">
+  <img src="./assets/rocky-skills-banner.png" alt="rocky-skills banner" />
+</p>
 
-![rocky-skills banner](./assets/rocky-skills-banner.png)
+<h1 align="center">rocky-skills</h1>
 
-This repository is a collection of skills I use in my regular workflow.
+<p align="center">This repository is a collection of skills I use in my regular workflow.</p>
 
 ## Structure
 
