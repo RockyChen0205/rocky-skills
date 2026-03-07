@@ -1,0 +1,111 @@
+\definecolor{darkgreen}{RGB}{0,100,0}
+\definecolor{tableauBlue}{RGB}{31,119,180}
+\definecolor{tableauOrange}{RGB}{255,127,14}
+\definecolor{tableauGreen}{RGB}{44,160,44}
+\definecolor{tableauRed}{RGB}{214,39,40}
+\definecolor{tableauPurple}{RGB}{148,103,189}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots,fillbetween}
+\pgfplotsset{every axis/.append style={font=\small}}
+% \pgfplotsset{
+%   legend image code/.code={
+%     % 绘制一条线段（线宽跟实际图中一样）
+%     \draw[##1, line width=2pt] (0cm,0cm) -- (0.5cm,0cm);
+%     % 在线段中间绘制一个标记
+%     \draw[##1, mark=*, mark options={solid, fill=##1}] (0.25cm,0cm) node{};
+%   }
+% }
+
+\begin{wrapfigure}[14]{r}{0.46\textwidth}
+  \centering
+  \vspace{-2em}
+  \begin{tikzpicture}[]
+    \begin{groupplot}[
+      group style={group size=1 by 1, horizontal sep=1.5cm},
+      axis background/.style={fill=gray!10},
+      width=0.48\textwidth,
+      height=0.4\textwidth,
+      xlabel={Sample Budget},
+      ylabel={Pass@k (\%)},
+      xmin=0, xmax=28,
+      ymin=80, ymax=100,
+      grid=both,
+      grid style={dashed,gray!30},
+      xlabel style={at={(axis description cs:0.5,-0.1)}, anchor=north},
+      ylabel style={at={(axis description cs:-0.1,0.5)}, anchor=south}
+    ]
+      % Subplot (a): FOLIO
+      \nextgroupplot[
+        % title={(a) Single thought vs. Mixture-of-Thought },
+        legend style={at={(axis description cs:1,0)}, anchor=south east, font=\small, draw=black!40, fill=gray!10, fill opacity=0.7}
+      ]
+      % Baseline data (Blue)
+      
+      \addplot+[name path=base, color=blue, line width=2pt, mark=*, mark size=2pt, mark options={fill=none}]
+        table [x index=0, y index=1] {data/FOLIO_MoT_NL_Code.dat};
+      \addlegendentry{\scalebox{0.8}{Gemma-2-9b-It (NL\_CoT + Code)}}
+
+      \addplot+[name path=base_tt, color=darkgreen!50, line width=2pt, mark=*, mark size=2pt, mark options={fill=none}]
+        table [x index=0, y index=1] {data/FOLIO_MoT_NL_TT.dat};
+      \addlegendentry{\scalebox{0.8}{Gemma-2-9b-It (NL\_CoT + Truth Table)}}
+
+      \addplot+[name path=base_code, color=tableauOrange!50, line width=2pt, mark=*, mark size=2pt, mark options={fill=none}]
+        table [x index=0, y index=1] {data/FOLIO_MoT_Code_TT.dat};
+      \addlegendentry{\scalebox{0.8}{Gemma-2-9b-It (Code + Truth Table)}}
+
+      % \addplot+[name path=base_mot, color=tableauPurple!50, line width=2pt, mark=*, mark size=2pt, mark options={fill=none}]
+      %   table [x index=0, y index=1] {data/FOLIO_Baseline_MoT.dat};
+      % \addlegendentry{\scalebox{0.8}{Gemma-2-9b-It (MoT)}}
+      
+      
+      % Mixture-of-Thought data (Red)
+      \addplot+[name path=moth, color=red, line width=2pt, mark=*, mark size=2pt, mark options={fill=none}]
+        table [x index=0, y index=1] {data/FOLIO_MoT.dat};
+      % \addlegendimage{mark=*, color=red, line width=2pt, mark size=2pt}
+      \addlegendentry{\scalebox{0.8}{Gemma-2-9b-It-MoT (MoT)}}
+
+      \addplot+[name path=baseupper, draw=none, mark=none]
+        table [x index=0, y expr=\thisrowno{1}+\thisrowno{2}] {data/FOLIO_Baseline_NL.dat};
+      \addplot+[name path=baselower, draw=none, mark=none]
+        table [x index=0, y expr=\thisrowno{1}-\thisrowno{2}] {data/FOLIO_Baseline_NL.dat};
+      \addplot [blue!20, opacity=0.7, forget plot, on layer=axis background]
+        fill between[of=baseupper and baselower];
+
+
+    \addplot+[name path=basettupper, draw=none, mark=none]
+        table [x index=0, y expr=\thisrowno{1}+\thisrowno{2}] {data/FOLIO_Baseline_TT.dat};
+      \addplot+[name path=basettlower, draw=none, mark=none]
+        table [x index=0, y expr=\thisrowno{1}-\thisrowno{2}] {data/FOLIO_Baseline_TT.dat};
+      \addplot [darkgreen!20, opacity=0.7, forget plot, on layer=axis background]
+        fill between[of=basettupper and basettlower];
+
+    \addplot+[name path=basecodeupper, draw=none, mark=none]
+        table [x index=0, y expr=\thisrowno{1}+\thisrowno{2}] {data/FOLIO_Baseline_Code.dat};
+      \addplot+[name path=basecodelower, draw=none, mark=none]
+        table [x index=0, y expr=\thisrowno{1}-\thisrowno{2}] {data/FOLIO_Baseline_Code.dat};
+      \addplot [tableauOrange!30, opacity=0.7, forget plot, on layer=axis background]
+        fill between[of=basecodeupper and basecodelower];
+
+      % \addplot+[name path=basemotupper, draw=none, mark=none]
+      %   table [x index=0, y expr=\thisrowno{1}+\thisrowno{2}] {data/FOLIO_Baseline_MoT.dat};
+      % \addplot+[name path=basemotlower, draw=none, mark=none]
+      %   table [x index=0, y expr=\thisrowno{1}-\thisrowno{2}] {data/FOLIO_Baseline_MoT.dat};
+      % \addplot [tableauPurple!30, opacity=0.7, forget plot, on layer=axis background]
+      %   fill between[of=basemotupper and basemotlower];
+      
+      \addplot+[name path=mothupper, draw=none, mark=none]
+        table [x index=0, y expr=\thisrowno{1}+\thisrowno{2}] {data/FOLIO_MoT.dat};
+      \addplot+[name path=mothlower, draw=none, mark=none]
+        table [x index=0, y expr=\thisrowno{1}-\thisrowno{2}] {data/FOLIO_MoT.dat};
+      \addplot [red!20, opacity=0.7, forget plot, on layer=axis background]
+        fill between[of=mothupper and mothlower];
+      
+      % Subplot (b): ProofWriter (dummy data)
+    
+      
+    \end{groupplot}
+  \end{tikzpicture}
+ \vspace{-0.8em}
+ \caption{Pass@k vs. Sample Budget for different modes}
+  \label{fig:tts_with_MoT}
+\end{wrapfigure}
