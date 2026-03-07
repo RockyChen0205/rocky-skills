@@ -27,3 +27,4 @@
 - `academic/humanizer` (https://github.com/blader/humanizer): 英文版 AI 写作去痕工具，基于维基百科 "Signs of AI writing" 指南，移除文本中的 AI 生成痕迹。
 - `academic/baoyu-translate` (https://github.com/JimLiu/baoyu-skills): 多模式翻译技能，支持快速/标准/精修三种模式，可自定义翻译风格（叙事/正式/技术/学术/商务等），支持长文分块翻译和术语表一致性。
 - `academic/arxiv-latex-to-knowledge-base`: 将 arXiv 论文转换为完整的知识库文档集合，包含英文 Markdown（直接从 LaTeX 转换）和中文总结笔记（按模板生成结构化总结），自动下载源码、提取图片、生成可直接阅读的笔记。
+- `academic/ml-paper-writing` (https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/20-ml-paper-writing): Write publication-ready ML/AI papers for NeurIPS, ICML, ICLR, ACL, AAAI, COLM. Includes LaTeX templates, citation verification workflows, and writing best practices from top researchers.
