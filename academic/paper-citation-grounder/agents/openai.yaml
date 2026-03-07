@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Citation Grounder"
+  short_description: "Verify and place paper citations"
+  default_prompt: "Use this skill to find, verify, place, and optionally write back trustworthy citations into a paper without clustering references or inventing sources."
