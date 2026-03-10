@@ -90,6 +90,12 @@
 **输入**: 搜索关键词（如 "neural networks protein structure"、"single cell RNA-seq"）
 **输出**: 相关论文列表，包含标题、摘要、作者、arXiv ID 等信息
 
+### [alphaxiv-paper-lookup](./academic/alphaxiv-paper-lookup/)
+在 alphaxiv.org 上查询 arXiv 论文，获取 AI 生成的、结构化的论文概述，比直接阅读 PDF 更快、更可靠。
+
+**输入**: arXiv URL（如 `arxiv.org/abs/2401.12345`）或论文 ID（如 `2401.12345`）
+**输出**: 结构化的 Markdown 分析报告，包含摘要、关键贡献、方法概述、技术细节等
+
 ## Attribution
 
 - **Humanizer-zh**: [op7418](https://github.com/op7418)
@@ -99,6 +105,7 @@
 - **ljg-xray-paper**: [lijigang](https://github.com/lijigang) (modified by RockyChen0205)
 - **peer-review**: [davila7](https://github.com/davila7/claude-code-templates)
 - **arxiv-search**: [LangChain AI](https://github.com/langchain-ai/deepagents)
+- **alphaxiv-paper-lookup**: [AlphaXiv](https://www.alphaxiv.org)
 
 Other skills are custom implementations.
 
