@@ -78,13 +78,13 @@
 - Markdown 分析报告（文件名：`{论文标题}_xray-read.md`）
 - 包含：核心痛点、解题机制、创新增量、批判性边界、ASCII 逻辑图、餐巾纸公式
 
-### [peer-review](./academic/peer-review/)
+### [peer-review](./academic/peer-review/) ([原始仓库](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/peer-review))
 系统性同行评审工具包。评估方法论、统计方法、研究设计、可复现性、伦理规范、图表完整性、报告标准。支持跨学科手稿和基金申请的评审。
 
 **输入**: 待评审的论文手稿、基金申请或研究提案
 **输出**: 结构化评审意见、改进建议、评分表
 
-### [arxiv-search](./academic/arxiv-search/)
+### [arxiv-search](./academic/arxiv-search/) ([原始仓库](https://github.com/langchain-ai/deepagents/tree/main/libs/deepagents-cli/examples/skills/arxiv-search))
 搜索 arXiv 预印本数据库，获取物理学、数学、计算机科学、量化生物学、量化金融、统计学等领域的最新研究成果。在论文正式发表前获取最新研究动态。
 
 **输入**: 搜索关键词（如 "neural networks protein structure"、"single cell RNA-seq"）
@@ -93,10 +93,12 @@
 ## Attribution
 
 - **Humanizer-zh**: [op7418](https://github.com/op7418)
-- **humanizer**: [blader](https://github.com/blader)  
+- **humanizer**: [blader](https://github.com/blader)
 - **baoyu-translate**: [JimLiu](https://github.com/JimLiu)
 - **ml-paper-writing**: [Orchestra Research](https://github.com/Orchestra-Research)
 - **ljg-xray-paper**: [lijigang](https://github.com/lijigang) (modified by RockyChen0205)
+- **peer-review**: [davila7](https://github.com/davila7/claude-code-templates)
+- **arxiv-search**: [LangChain AI](https://github.com/langchain-ai/deepagents)
 
 Other skills are custom implementations.
 
