@@ -6,6 +6,17 @@
 
 <p align="center">This repository is a collection of skills I use in my regular workflow.</p>
 
+<p align="center">
+
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
+![LaTeX](https://img.shields.io/badge/-LaTeX-008080?style=flat&logo=latex&logoColor=white)
+![Markdown](https://img.shields.io/badge/-Markdown-083FA1?style=flat&logo=markdown&logoColor=white)
+![Obsidian](https://img.shields.io/badge/-Obsidian-7C3AED?style=flat&logo=obsidian&logoColor=white)
+![Claude Code](https://img.shields.io/badge/-Claude%20Code-FF6C37?style=flat&logo=anthropic&logoColor=white)
+![PDF](https://img.shields.io/badge/-PDF-F40F39?style=flat&logo=adobe-acrobat-reader&logoColor=white)
+
+</p>
+
 ## Structure
 
 - `academic/`: skills for academic writing, paper analysis, citation grounding, and related research tasks.
@@ -57,40 +68,40 @@
 
 ### 通用学术技能 (academic/)
 
-### [paper-citation-grounder](./academic/paper-citation-grounder/)
+#### [paper-citation-grounder](./academic/paper-citation-grounder/)
 在论文中查找、验证、放置并可选地写入可靠的引用，同时避免虚构引用和引用聚类。
 
-**输入**: 论文草稿（Markdown/LaTeX）、待验证的引用声明  
+**输入**: 论文草稿（Markdown/LaTeX）、待验证的引用声明
 **输出**: 经过验证的引用、引用位置建议、引用报告
 
-### [Humanizer-zh](./academic/Humanizer-zh/) ([原始仓库](https://github.com/op7418/Humanizer-zh))
+#### [Humanizer-zh](./academic/Humanizer-zh/) ([原始仓库](https://github.com/op7418/Humanizer-zh))
 中文版 AI 写作去痕工具，基于维基百科 "Signs of AI writing" 指南，帮助将 AI 生成的内容改写得更自然、更像人类书写。
 
-**输入**: AI 生成的中文文本  
+**输入**: AI 生成的中文文本
 **输出**: 去除 AI 痕迹后的自然中文文本
 
-### [humanizer](./academic/humanizer/) ([原始仓库](https://github.com/blader/humanizer))
+#### [humanizer](./academic/humanizer/) ([原始仓库](https://github.com/blader/humanizer))
 英文版 AI 写作去痕工具，基于维基百科 "Signs of AI writing" 指南，移除文本中的 AI 生成痕迹。
 
-**输入**: AI 生成的英文文本  
+**输入**: AI 生成的英文文本
 **输出**: 去除 AI 痕迹后的自然英文文本
 
-### [baoyu-translate](./academic/baoyu-translate/) ([原始仓库](https://github.com/JimLiu/baoyu-skills))
+#### [baoyu-translate](./academic/baoyu-translate/) ([原始仓库](https://github.com/JimLiu/baoyu-skills))
 多模式翻译技能，支持快速/标准/精修三种模式，可自定义翻译风格（叙事/正式/技术/学术/商务等），支持长文分块翻译和术语表一致性。
 
-**输入**: 源语言文本、目标语言、翻译模式（quick/normal/refined）、术语表（可选）  
+**输入**: 源语言文本、目标语言、翻译模式（quick/normal/refined）、术语表（可选）
 **输出**: 翻译后的目标语言文本、术语一致性检查报告
 
-### [ml-paper-writing](./academic/ml-paper-writing/) ([原始仓库](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/20-ml-paper-writing))
+#### [ml-paper-writing](./academic/ml-paper-writing/) ([原始仓库](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/20-ml-paper-writing))
 为 NeurIPS、ICML、ICLR、ACL、AAAI、COLM 等顶级会议撰写 publication-ready 的 ML/AI 论文。包含 LaTeX 模板、引用验证工作流以及来自顶级研究者的写作最佳实践。
 
-**输入**: 研究代码仓库、实验结果、初步草稿（可选）  
-**输出**: 
+**输入**: 研究代码仓库、实验结果、初步草稿（可选）
+**输出**:
 - 完整的论文草稿（LaTeX/Markdown）
 - 经过验证的引用列表（BibTeX）
 - 符合会议格式的提交文件
 
-### [ljg-xray-paper](./academic/ljg-xray-paper/) ([原始仓库](https://github.com/lijigang/ljg-skill-xray-paper)) ⚠️ 已修改
+#### [ljg-xray-paper](./academic/ljg-xray-paper/) ([原始仓库](https://github.com/lijigang/ljg-skill-xray-paper)) ⚠️ 已修改
 像 X 光机一样解构学术论文，穿透学术黑话，提取核心贡献、关键假设和"餐巾纸公式"级别的洞察。生成结构化分析报告和 ASCII 逻辑图。
 
 **修改说明**: 对原始 skill 进行了以下修改：
@@ -103,13 +114,13 @@
 - Markdown 分析报告（文件名：`{论文标题}_xray-read.md`）
 - 包含：核心痛点、解题机制、创新增量、批判性边界、ASCII 逻辑图、餐巾纸公式
 
-### [peer-review](./academic/peer-review/) ([原始仓库](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/peer-review))
+#### [peer-review](./academic/peer-review/) ([原始仓库](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/peer-review))
 系统性同行评审工具包。评估方法论、统计方法、研究设计、可复现性、伦理规范、图表完整性、报告标准。支持跨学科手稿和基金申请的评审。
 
 **输入**: 待评审的论文手稿、基金申请或研究提案
 **输出**: 结构化评审意见、改进建议、评分表
 
-### [arxiv-search](./academic/arxiv-search/) ([原始仓库](https://github.com/langchain-ai/deepagents/tree/main/libs/deepagents-cli/examples/skills/arxiv-search))
+#### [arxiv-search](./academic/arxiv-search/) ([原始仓库](https://github.com/langchain-ai/deepagents/tree/main/libs/deepagents-cli/examples/skills/arxiv-search))
 搜索 arXiv 预印本数据库，获取物理学、数学、计算机科学、量化生物学、量化金融、统计学等领域的最新研究成果。在论文正式发表前获取最新研究动态。
 
 **输入**: 搜索关键词（如 "neural networks protein structure"、"single cell RNA-seq"）
