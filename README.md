@@ -90,11 +90,23 @@
 **输入**: 搜索关键词（如 "neural networks protein structure"、"single cell RNA-seq"）
 **输出**: 相关论文列表，包含标题、摘要、作者、arXiv ID 等信息
 
-### [alphaxiv-paper-lookup](./academic/alphaxiv-paper-lookup/)
-在 alphaxiv.org 上查询 arXiv 论文，获取 AI 生成的、结构化的论文概述，比直接阅读 PDF 更快、更可靠。
+### [paper-index-generator](./academic/paper-index-generator/)
+为指定目录生成/更新 paper-index.yaml 索引文件，自动从论文笔记中提取元信息并生成结构化索引。
 
-**输入**: arXiv URL（如 `arxiv.org/abs/2401.12345`）或论文 ID（如 `2401.12345`）
-**输出**: 结构化的 Markdown 分析报告，包含摘要、关键贡献、方法概述、技术细节等
+**输入**: 目录路径
+**输出**: paper-index.yaml 文件，包含论文标题、作者、日期、标签、arXiv ID、摘要等信息
+
+### [vault-paper-survey](./academic/vault-paper-survey/)
+在当前 Academic Vault 的 03-Papers 中执行 project 级论文调研。先读取 paper-index.yaml 做宽搜，再用多 agent 并行精读论文笔记，最后按用户目标生成 survey、solution research、research gap、proposal input 等产物。
+
+**输入**: 目录路径、问题描述或混合驱动
+**输出**: 论文综述、解决方案调研、研究空白分析、提案输入等
+
+### [sync-obsidian](./academic/sync-obsidian/)
+自动同步 Claude Code 会话计划和实施报告到 Obsidian vault，生成 Markdown 笔记 + 可视化 Canvas 地图。
+
+**输入**: plan 或 report 指令，以及可选的标题
+**输出**: Obsidian vault 中的 Markdown 笔记和 Canvas 地图
 
 ## Attribution
 

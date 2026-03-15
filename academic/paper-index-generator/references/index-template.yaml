@@ -1,0 +1,34 @@
+# Paper Index Template
+# 简化版但保留详细信息
+
+# 示例条目结构
+- id: video-thinker-2025
+  title: "Video-Thinker: Sparking Thinking with Videos via RL"
+  arxiv: "2510.23473"
+  date: "2025.10"
+  team: "Southeast University, Monash University, Xiaohongshu"
+  year: 2025
+  core_contribution: 提出Video-Thinker框架，通过SFT+GRPO训练使MLLMs能够自主利用内在的grounding和captioning能力生成推理线索，无需构建外部工具即可实现高效视频推理，在Video-Holmes等基准上达到SOTA
+  task_type: [video_reasoning, chain_of_thought]
+  method_type: [reinforcement_learning, grpo, intrinsic_tool]
+  tech_highlights: [grounding, captioning, chain_of_thought]
+
+# 字段说明
+# id: 唯一标识，标题缩写（去掉空格和特殊字符）+ 年份
+# title: 论文标题（精简版，去掉副标题中的冗长描述）
+# arxiv: arXiv ID（可选）
+# date: 发表年月
+# team: 团队（精简版，保留主要机构，去掉"University of"等）
+# year: 年份数字
+# core_contribution:
+#   - 必须是一句话（50-80字）
+#   - 包含：方法名称 + 核心机制 + 创新点 + 效果/应用
+#   - 示例："提出XXX框架，通过YYY技术实现ZZZ，在AAA场景下达到BBB效果"
+# task_type: 任务类型列表（3-5个关键词）
+# method_type: 方法类型列表（3-5个关键词）
+# tech_highlights: 技术亮点列表（3-5个关键词）
+
+# note_path 推断规则
+# paper-index.yaml 所在目录 + {id}.md
+# 例如：03-Papers/xxx/paper-index.yaml 中的 video-thinker-2025
+# → 对应 03-Papers/xxx/video-thinker-2025.md
