@@ -13,6 +13,8 @@
 ![Markdown](https://img.shields.io/badge/-Markdown-083FA1?style=flat&logo=markdown&logoColor=white)
 ![Obsidian](https://img.shields.io/badge/-Obsidian-7C3AED?style=flat&logo=obsidian&logoColor=white)
 ![Claude Code](https://img.shields.io/badge/-Claude%20Code-FF6C37?style=flat&logo=anthropic&logoColor=white)
+![Codex](https://img.shields.io/badge/-Codex-0098FF?style=flat)
+![OpenCode](https://img.shields.io/badge/-OpenCode-1E1E1E?style=flat)
 ![PDF](https://img.shields.io/badge/-PDF-F40F39?style=flat&logo=adobe-acrobat-reader&logoColor=white)
 
 </p>
