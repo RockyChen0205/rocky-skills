@@ -9,6 +9,7 @@
 ## Structure
 
 - `academic/`: skills for academic writing, paper analysis, citation grounding, and related research tasks.
+  - `obsidian/`: Obsidian vault workflow - paper indexing, survey, and sync.
 
 ## 如何安装
 
@@ -21,6 +22,40 @@
 ```
 
 ## Included Skills
+
+### Obsidian 学术工作流 (academic/obsidian/)
+
+一组围绕 Obsidian Academic Vault 设计的论文管理 skills，从论文获取、索引管理到调研同步。
+
+#### [arxiv-latex-to-knowledge-base](./academic/obsidian/arxiv-latex-to-knowledge-base/)
+将 arXiv 论文转换为完整的知识库文档集合，包含英文 Markdown（直接从 LaTeX 转换）和中文总结笔记（按模板生成结构化总结），自动下载源码、提取图片、生成可直接阅读的笔记。
+
+**输入**: arXiv 论文 URL 或论文 ID
+**输出**:
+- 英文 Markdown（从 LaTeX 直接转换）
+- 中文总结笔记（按模板结构化）
+- 原始 PDF 文件
+- 提取的图片
+
+#### [paper-index-generator](./academic/obsidian/paper-index-generator/)
+为指定目录生成/更新 paper-index.yaml 索引文件，自动从论文笔记中提取元信息并生成结构化索引。
+
+**输入**: 目录路径
+**输出**: paper-index.yaml 文件，包含论文标题、作者、日期、标签、arXiv ID、摘要等信息
+
+#### [vault-paper-survey](./academic/obsidian/vault-paper-survey/)
+在当前 Academic Vault 的 03-Papers 中执行 project 级论文调研。先读取 paper-index.yaml 做宽搜，再用多 agent 并行精读论文笔记，最后按用户目标生成 survey、solution research、research gap、proposal input 等产物。
+
+**输入**: 目录路径、问题描述或混合驱动
+**输出**: 论文综述、解决方案调研、研究空白分析、提案输入等
+
+#### [sync-obsidian](./academic/obsidian/sync-obsidian/)
+自动同步 Claude Code 会话计划和实施报告到 Obsidian vault，生成 Markdown 笔记 + 可视化 Canvas 地图。
+
+**输入**: plan 或 report 指令，以及可选的标题
+**输出**: Obsidian vault 中的 Markdown 笔记和 Canvas 地图
+
+### 通用学术技能 (academic/)
 
 ### [paper-citation-grounder](./academic/paper-citation-grounder/)
 在论文中查找、验证、放置并可选地写入可靠的引用，同时避免虚构引用和引用聚类。
@@ -45,16 +80,6 @@
 
 **输入**: 源语言文本、目标语言、翻译模式（quick/normal/refined）、术语表（可选）  
 **输出**: 翻译后的目标语言文本、术语一致性检查报告
-
-### [arxiv-latex-to-knowledge-base](./academic/arxiv-latex-to-knowledge-base/)
-将 arXiv 论文转换为完整的知识库文档集合，包含英文 Markdown（直接从 LaTeX 转换）和中文总结笔记（按模板生成结构化总结），自动下载源码、提取图片、生成可直接阅读的笔记。
-
-**输入**: arXiv 论文 URL 或论文 ID  
-**输出**: 
-- 英文 Markdown（从 LaTeX 直接转换）
-- 中文总结笔记（按模板结构化）
-- 原始 PDF 文件
-- 提取的图片
 
 ### [ml-paper-writing](./academic/ml-paper-writing/) ([原始仓库](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/20-ml-paper-writing))
 为 NeurIPS、ICML、ICLR、ACL、AAAI、COLM 等顶级会议撰写 publication-ready 的 ML/AI 论文。包含 LaTeX 模板、引用验证工作流以及来自顶级研究者的写作最佳实践。
@@ -89,24 +114,6 @@
 
 **输入**: 搜索关键词（如 "neural networks protein structure"、"single cell RNA-seq"）
 **输出**: 相关论文列表，包含标题、摘要、作者、arXiv ID 等信息
-
-### [paper-index-generator](./academic/paper-index-generator/)
-为指定目录生成/更新 paper-index.yaml 索引文件，自动从论文笔记中提取元信息并生成结构化索引。
-
-**输入**: 目录路径
-**输出**: paper-index.yaml 文件，包含论文标题、作者、日期、标签、arXiv ID、摘要等信息
-
-### [vault-paper-survey](./academic/vault-paper-survey/)
-在当前 Academic Vault 的 03-Papers 中执行 project 级论文调研。先读取 paper-index.yaml 做宽搜，再用多 agent 并行精读论文笔记，最后按用户目标生成 survey、solution research、research gap、proposal input 等产物。
-
-**输入**: 目录路径、问题描述或混合驱动
-**输出**: 论文综述、解决方案调研、研究空白分析、提案输入等
-
-### [sync-obsidian](./academic/sync-obsidian/)
-自动同步 Claude Code 会话计划和实施报告到 Obsidian vault，生成 Markdown 笔记 + 可视化 Canvas 地图。
-
-**输入**: plan 或 report 指令，以及可选的标题
-**输出**: Obsidian vault 中的 Markdown 笔记和 Canvas 地图
 
 ## Attribution
 
