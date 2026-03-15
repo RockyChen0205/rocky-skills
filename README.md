@@ -21,6 +21,7 @@
 
 - `academic/`: skills for academic writing, paper analysis, citation grounding, and related research tasks.
   - `obsidian/`: Obsidian vault workflow - paper indexing, survey, and sync.
+  - `general/`: General academic skills - writing, translation, review, etc.
 
 ## 如何安装
 
@@ -38,7 +39,7 @@
 
 一组围绕 Obsidian Academic Vault 设计的论文管理 skills，从论文获取、索引管理到调研同步。
 
-#### [arxiv-latex-to-knowledge-base](./academic/obsidian/arxiv-latex-to-knowledge-base/)
+#### [arxiv-latex-to-knowledge-base](./academic/general/obsidian/arxiv-latex-to-knowledge-base/)
 将 arXiv 论文转换为完整的知识库文档集合，包含英文 Markdown（直接从 LaTeX 转换）和中文总结笔记（按模板生成结构化总结），自动下载源码、提取图片、生成可直接阅读的笔记。
 
 **输入**: arXiv 论文 URL 或论文 ID
@@ -48,51 +49,51 @@
 - 原始 PDF 文件
 - 提取的图片
 
-#### [paper-index-generator](./academic/obsidian/paper-index-generator/)
+#### [paper-index-generator](./academic/general/obsidian/paper-index-generator/)
 为指定目录生成/更新 paper-index.yaml 索引文件，自动从论文笔记中提取元信息并生成结构化索引。
 
 **输入**: 目录路径
 **输出**: paper-index.yaml 文件，包含论文标题、作者、日期、标签、arXiv ID、摘要等信息
 
-#### [vault-paper-survey](./academic/obsidian/vault-paper-survey/)
+#### [vault-paper-survey](./academic/general/obsidian/vault-paper-survey/)
 在当前 Academic Vault 的 03-Papers 中执行 project 级论文调研。先读取 paper-index.yaml 做宽搜，再用多 agent 并行精读论文笔记，最后按用户目标生成 survey、solution research、research gap、proposal input 等产物。
 
 **输入**: 目录路径、问题描述或混合驱动
 **输出**: 论文综述、解决方案调研、研究空白分析、提案输入等
 
-#### [sync-obsidian](./academic/obsidian/sync-obsidian/)
+#### [sync-obsidian](./academic/general/obsidian/sync-obsidian/)
 自动同步 Claude Code 会话计划和实施报告到 Obsidian vault，生成 Markdown 笔记 + 可视化 Canvas 地图。
 
 **输入**: plan 或 report 指令，以及可选的标题
 **输出**: Obsidian vault 中的 Markdown 笔记和 Canvas 地图
 
-### 通用学术技能 (academic/)
+### 通用学术技能 (academic/general/)
 
-#### [paper-citation-grounder](./academic/paper-citation-grounder/)
+#### [paper-citation-grounder](./academic/general/paper-citation-grounder/)
 在论文中查找、验证、放置并可选地写入可靠的引用，同时避免虚构引用和引用聚类。
 
 **输入**: 论文草稿（Markdown/LaTeX）、待验证的引用声明
 **输出**: 经过验证的引用、引用位置建议、引用报告
 
-#### [Humanizer-zh](./academic/Humanizer-zh/) ([原始仓库](https://github.com/op7418/Humanizer-zh))
+#### [Humanizer-zh](./academic/general/Humanizer-zh/) ([原始仓库](https://github.com/op7418/Humanizer-zh))
 中文版 AI 写作去痕工具，基于维基百科 "Signs of AI writing" 指南，帮助将 AI 生成的内容改写得更自然、更像人类书写。
 
 **输入**: AI 生成的中文文本
 **输出**: 去除 AI 痕迹后的自然中文文本
 
-#### [humanizer](./academic/humanizer/) ([原始仓库](https://github.com/blader/humanizer))
+#### [humanizer](./academic/general/humanizer/) ([原始仓库](https://github.com/blader/humanizer))
 英文版 AI 写作去痕工具，基于维基百科 "Signs of AI writing" 指南，移除文本中的 AI 生成痕迹。
 
 **输入**: AI 生成的英文文本
 **输出**: 去除 AI 痕迹后的自然英文文本
 
-#### [baoyu-translate](./academic/baoyu-translate/) ([原始仓库](https://github.com/JimLiu/baoyu-skills))
+#### [baoyu-translate](./academic/general/baoyu-translate/) ([原始仓库](https://github.com/JimLiu/baoyu-skills))
 多模式翻译技能，支持快速/标准/精修三种模式，可自定义翻译风格（叙事/正式/技术/学术/商务等），支持长文分块翻译和术语表一致性。
 
 **输入**: 源语言文本、目标语言、翻译模式（quick/normal/refined）、术语表（可选）
 **输出**: 翻译后的目标语言文本、术语一致性检查报告
 
-#### [ml-paper-writing](./academic/ml-paper-writing/) ([原始仓库](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/20-ml-paper-writing))
+#### [ml-paper-writing](./academic/general/ml-paper-writing/) ([原始仓库](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/20-ml-paper-writing))
 为 NeurIPS、ICML、ICLR、ACL、AAAI、COLM 等顶级会议撰写 publication-ready 的 ML/AI 论文。包含 LaTeX 模板、引用验证工作流以及来自顶级研究者的写作最佳实践。
 
 **输入**: 研究代码仓库、实验结果、初步草稿（可选）
@@ -101,7 +102,7 @@
 - 经过验证的引用列表（BibTeX）
 - 符合会议格式的提交文件
 
-#### [ljg-xray-paper](./academic/ljg-xray-paper/) ([原始仓库](https://github.com/lijigang/ljg-skill-xray-paper)) ⚠️ 已修改
+#### [ljg-xray-paper](./academic/general/ljg-xray-paper/) ([原始仓库](https://github.com/lijigang/ljg-skill-xray-paper)) ⚠️ 已修改
 像 X 光机一样解构学术论文，穿透学术黑话，提取核心贡献、关键假设和"餐巾纸公式"级别的洞察。生成结构化分析报告和 ASCII 逻辑图。
 
 **修改说明**: 对原始 skill 进行了以下修改：
@@ -114,13 +115,13 @@
 - Markdown 分析报告（文件名：`{论文标题}_xray-read.md`）
 - 包含：核心痛点、解题机制、创新增量、批判性边界、ASCII 逻辑图、餐巾纸公式
 
-#### [peer-review](./academic/peer-review/) ([原始仓库](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/peer-review))
+#### [peer-review](./academic/general/peer-review/) ([原始仓库](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/peer-review))
 系统性同行评审工具包。评估方法论、统计方法、研究设计、可复现性、伦理规范、图表完整性、报告标准。支持跨学科手稿和基金申请的评审。
 
 **输入**: 待评审的论文手稿、基金申请或研究提案
 **输出**: 结构化评审意见、改进建议、评分表
 
-#### [arxiv-search](./academic/arxiv-search/) ([原始仓库](https://github.com/langchain-ai/deepagents/tree/main/libs/deepagents-cli/examples/skills/arxiv-search))
+#### [arxiv-search](./academic/general/arxiv-search/) ([原始仓库](https://github.com/langchain-ai/deepagents/tree/main/libs/deepagents-cli/examples/skills/arxiv-search))
 搜索 arXiv 预印本数据库，获取物理学、数学、计算机科学、量化生物学、量化金融、统计学等领域的最新研究成果。在论文正式发表前获取最新研究动态。
 
 **输入**: 搜索关键词（如 "neural networks protein structure"、"single cell RNA-seq"）
