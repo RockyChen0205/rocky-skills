@@ -7,16 +7,14 @@
 <p align="center">This repository is a collection of skills I use in my regular workflow.</p>
 
 <p align="center">
-
-![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
-![LaTeX](https://img.shields.io/badge/-LaTeX-008080?style=flat&logo=latex&logoColor=white)
-![Markdown](https://img.shields.io/badge/-Markdown-083FA1?style=flat&logo=markdown&logoColor=white)
-![Obsidian](https://img.shields.io/badge/-Obsidian-7C3AED?style=flat&logo=obsidian&logoColor=white)
-![Claude Code](https://img.shields.io/badge/-Claude%20Code-FF6C37?style=flat&logo=anthropic&logoColor=white)
-![Codex](https://img.shields.io/badge/-Codex-0098FF?style=flat)
-![OpenCode](https://img.shields.io/badge/-OpenCode-1E1E1E?style=flat)
-![PDF](https://img.shields.io/badge/-PDF-F40F39?style=flat&logo=adobe-acrobat-reader&logoColor=white)
-
+  <img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/-LaTeX-008080?style=flat&logo=latex&logoColor=white" alt="LaTeX" />
+  <img src="https://img.shields.io/badge/-Markdown-083FA1?style=flat&logo=markdown&logoColor=white" alt="Markdown" />
+  <img src="https://img.shields.io/badge/-Obsidian-7C3AED?style=flat&logo=obsidian&logoColor=white" alt="Obsidian" />
+  <img src="https://img.shields.io/badge/-Claude%20Code-FF6C37?style=flat&logo=anthropic&logoColor=white" alt="Claude Code" />
+  <img src="https://img.shields.io/badge/-Codex-0098FF?style=flat" alt="Codex" />
+  <img src="https://img.shields.io/badge/-OpenCode-1E1E1E?style=flat" alt="OpenCode" />
+  <img src="https://img.shields.io/badge/-PDF-F40F39?style=flat&logo=adobe-acrobat-reader&logoColor=white" alt="PDF" />
 </p>
 
 ## Structure
