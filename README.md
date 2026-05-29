@@ -19,6 +19,9 @@
 
 ## Structure
 
+- `sources/`: synchronized local skills from `~/.agents/skills`,
+  `~/.codex/skills`, `~/.codex/vendor_imports/skills`, and
+  `~/.claude/skills`.
 - `academic/`: skills for academic writing, paper analysis, citation grounding, and related research tasks.
   - `obsidian/`: Obsidian vault workflow - paper indexing, survey, and sync.
   - `general/`: General academic skills - writing, translation, review, etc.
