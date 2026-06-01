@@ -22,6 +22,7 @@
 - `sources/`: synchronized local skills from `~/.agents/skills`,
   `~/.codex/skills`, `~/.codex/vendor_imports/skills`, and
   `~/.claude/skills`.
+- `engineer/`: skills for engineering workflow, project continuity, and development handoff.
 - `academic/`: skills for academic writing, paper analysis, citation grounding, and related research tasks.
   - `obsidian/`: Obsidian vault workflow - paper indexing, survey, and sync.
   - `general/`: General academic skills - writing, translation, review, etc.
@@ -37,6 +38,17 @@
 ```
 
 ## Included Skills
+
+### 工程工作流 (engineer/)
+
+#### [handoff](./engineer/handoff/)
+为下一位 AI agent 生成项目交接文档，固定写入 `./{yymmdd}-handoff.md`，覆盖当天旧交接文件。适合当前上下文过长、任务需要换会话继续、或需要把目标、进展、关键上下文、风险和下一步动作固化下来。
+
+**输入**: 当前会话上下文、工作区状态、任务文档和用户补充信息
+**输出**:
+- `./{yymmdd}-handoff.md`
+- 包含 7 个固定章节的接手摘要
+- 下一位 Agent 的第一步建议
 
 ### Obsidian 学术工作流 (academic/obsidian/)
 
